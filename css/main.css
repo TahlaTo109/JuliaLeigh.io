@@ -96,16 +96,15 @@ main {
 .proj {
     width: 15rem;
     height: 200px;
-    margin: 0.5rem auto;
+    margin: 1rem;
     border-radius: 16px;
-    box-shadow:  5px 5px 8px rgba(0, 0, 0, 0.521);
+    box-shadow:  0 0 0 3px rgb(0, 0, 0);
 }
 .projImg {
     background-color: rgb(214, 214, 214);
     height: 75%;
     border-radius: 16px 16px 0 0;
     text-align: center;
-    
 }
 .projDesc {
     text-align: center;
@@ -128,10 +127,10 @@ main {
     border-radius: 12px;
 }
 
-.about {
+.about, .intro {
     text-align: center;
     font-size: larger;
-    width: 550px;
+    width: auto;
     margin: 5px auto;
 }
 /**##########################################################################*/
