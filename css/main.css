@@ -35,11 +35,7 @@
 a {
     text-decoration: none;
 }  
-a:hover {
-    background-color: white;
-    border-radius: 12px;
-    padding: 0 10px;
-}
+
 
 li {
     list-style: none;
@@ -48,10 +44,10 @@ li {
 legend {
     font-size: larger;
     font-weight: bold;
-    background-color: hsl(0, 100%, 99%);
-    width: 80px;
-    border-radius: 12px;
-    border: 2px solid black;
+    background-color: hsl(0, 0%, 91%);
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    border: none;
     margin-bottom: 5px;
 }
 /** Temp body selector to ease eyes during dev time */
@@ -61,11 +57,14 @@ legend {
 /** Page Header */
 /**##########################################################################*/
 
-.headerTitle {
+.headerSpace {
     display: flex;
     flex-direction: row;
     margin-bottom: 5px;
     background-color: #070b1d6e;
+}
+.header {
+    margin: 0 0.7rem;
 }
 
 /**##########################################################################*/
@@ -84,6 +83,47 @@ legend {
     margin: 1rem auto;
 }
 
+.projDisplay {
+    display: flex;
+    flex-direction: row;
+}
+
+.proj {
+    width: 15rem;
+    height: 200px;
+    margin: 0.5rem auto;
+    border-radius: 16px;
+    box-shadow:  5px 5px 8px rgba(0, 0, 0, 0.521);
+}
+.projImg {
+    background-color: rgb(214, 214, 214);
+    height: 75%;
+    border-radius: 16px 16px 0 0;
+    text-align: center;
+    
+}
+.projDesc {
+    text-align: center;
+    margin-top: 14px;
+    font-size: large;
+    font-weight: bold;
+}
+.projDisplay a {
+    color: black;
+}
+.projImg:hover {
+    background-color: #00000070;
+    transition: 0.3s;
+    z-index: 5;
+}
+
+.projImg img {
+    width: 94%;
+    height: auto;
+    margin: 3%;
+    z-index: 0;
+    border-radius: 12px;
+}
 /**##########################################################################*/
 /* Page Footer */
 /**##########################################################################*/
@@ -98,13 +138,17 @@ legend {
 
     .container {
         background-color: #c9c7c7;
-        border: 1px solid black;
+        border: none;
         border-radius: 12px;
         width: 120px;
         height: 85%;
         margin: 0 0.4rem;
     }
     .container a {
-        color: black;
+        color: #000000;
     }
-    
+    .container a:hover {
+        background-color: white;
+        padding: 0 8px;
+        border-radius: 12px;
+    }
