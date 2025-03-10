@@ -70,6 +70,11 @@ legend {
 /**##########################################################################*/
 /** Page Main */
 /**##########################################################################*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .picContainer {
     display: flex;
@@ -114,15 +119,20 @@ legend {
 .projImg:hover {
     background-color: #00000070;
     transition: 0.3s;
-    z-index: 5;
 }
 
 .projImg img {
     width: 94%;
     height: auto;
     margin: 3%;
-    z-index: 0;
     border-radius: 12px;
+}
+
+.about {
+    text-align: center;
+    font-size: larger;
+    width: 550px;
+    margin: 5px auto;
 }
 /**##########################################################################*/
 /* Page Footer */
