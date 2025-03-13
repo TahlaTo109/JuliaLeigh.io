@@ -13,51 +13,46 @@
   --secondary-text: #e8e8e8;
   --text-color: #111528;
 }
-/** Dark theme */
-.darkmode {
-  --accent-color: #768495;
-  --base-color: #070b1d;
-  --base-variant: #181c30;
-  --hover-color: #58585d7a;
-  --hover-text: #bcbcbc;
-  --primary-color: #3a435d;
-  --secondary-text: #a4a5b8;
-  --text-color: #ffffff;
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
 }
 
 /** Targets ALL elements on an HTML page */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /** Targets ALL 'anchor' elements */
 a {
   text-decoration: none;
+  font-size: larger;
 }
 
 li {
   list-style: none;
 }
 
-legend {
-  font-size: larger;
-  font-weight: bold;
-  background-color: hsl(0, 0%, 91%);
-  width: 100%;
-  border-radius: 12px 12px 0 0;
-  border: none;
-  margin-bottom: 5px;
-}
+
 /** Temp body selector to ease eyes during dev time */
 
 /**##########################################################################*/
 /** Page Header */
 /**##########################################################################*/
+header {
+  width: auto;
+  border-bottom: 2px solid;
+  margin-bottom: 1%;
+}
 
 .headerSpace {
-  display: flex;
-  flex-direction: row;
   margin-bottom: 5px;
   background-color: #070b1d6e;
 }
@@ -65,72 +60,83 @@ legend {
   margin: 0 0.7rem;
 }
 
+.pageName {
+  text-align: center;
+  margin: 2%;
+}
+
 /**##########################################################################*/
 /** Page Main */
 /**##########################################################################*/
 main {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-}
-
-.picContainer {
-  display: flex;
+  width: auto;
+  flex-wrap: wrap;
   justify-content: center;
-}
-
-.picture {
-  width: 10rem;
-  border-radius: 12px;
-  border: 2px solid black;
-  margin: 1rem auto;
+  text-align: center;
+  flex: 1;
 }
 
 .projDisplay {
+  width: 100%;
   display: flex;
   flex-direction: row;
-}
-
-.proj {
-  width: 15rem;
-  height: 200px;
-  margin: 1rem;
-  border-radius: 16px;
-  box-shadow: 0 0 0 3px rgb(0, 0, 0);
-}
-.projImg {
-  background-color: rgb(214, 214, 214);
-  height: 75%;
-  border-radius: 16px 16px 0 0;
-  text-align: center;
-}
-.projDesc {
-  text-align: center;
-  margin-top: 14px;
-  font-size: large;
-  font-weight: bold;
+  justify-content: space-around;
 }
 .projDisplay a {
   color: black;
+}
+
+.proj {
+  height: 17rem;
+  width: 25rem;
+  min-width: 5rem;
+  margin: 3% 2%;
+  border-radius: 16px;
+  border: 4px solid black;
+  background-color: #888888ab;
+  padding: 0.3rem;
+}
+
+.projImg {
+  background-color: rgb(230, 227, 227);
+  border-radius: 16px;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .projImg:hover {
   background-color: #00000070;
   transition: 0.3s;
 }
-
-.projImg img {
-  width: 90%;
-  height: inherit;
-  margin-top: 3%;
+.projPreview {
+  width: 95%;
+  height: 95%;
+  margin: 3%;
   border-radius: 12px;
+}
+
+.projDesc {
+  margin: 3%;
+  font-size: inherit;
+  font-weight: bold;
 }
 
 .about,
 .intro {
-  text-align: center;
-  font-size: larger;
+  font-size: x-large;
   width: auto;
   margin: 5px auto;
+}
+
+.picture {
+  margin-top: 0.5rem;
+  width: 23%;
+  border-radius: 16px;
+  border: 4px solid black;
 }
 /**##########################################################################*/
 /* Page Footer */
@@ -142,15 +148,17 @@ footer {
   text-align: center;
   height: 8rem;
   align-items: center;
+  padding: 1rem;
+  justify-content: space-around;
 }
 
 .container {
   background-color: #c9c7c7;
   border: none;
   border-radius: 12px;
-  width: 120px;
-  height: 85%;
+  width: 40%;
   margin: 0 0.4rem;
+  padding: 0.3rem 0;
 }
 .container a {
   color: #000000;
@@ -159,4 +167,14 @@ footer {
   background-color: white;
   padding: 0 8px;
   border-radius: 12px;
+}
+
+.groupName {
+  font-size: larger;
+  font-weight: bold;
+  background-color: hsl(0, 0%, 91%);
+  width: 100%;
+  border-radius: 12px;
+  border: none;
+  margin-bottom: 5px;
 }
